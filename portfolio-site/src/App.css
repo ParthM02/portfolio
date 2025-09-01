@@ -1,3 +1,4 @@
+/* FINAL VERSION */
 .App {
   text-align: center;
 }
@@ -37,13 +38,17 @@
   }
 }
 
+html, body {
+  scroll-snap-type: y mandatory;
+  overflow-x: hidden;
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Arial, sans-serif;
   background: #111;
   color: #f7f7f7;
   scroll-behavior: smooth;
-  /* For scroll resistance effect */
   overscroll-behavior-y: contain;
 }
 
@@ -120,14 +125,12 @@ footer a {
   text-decoration: none;
 }
 
-/* Portfolio specific styles */
 .portfolio-bg {
   min-height: 100vh;
   background: #111;
   position: relative;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -138,10 +141,10 @@ footer a {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 32px; /* Reduced from 48px */
+  padding: 0 32px;
   z-index: 100;
   box-shadow: 0 2px 16px rgba(0,0,0,0.25);
-  box-sizing: border-box; /* Add this line */
+  box-sizing: border-box;
 }
 
 .navbar-left {
@@ -186,7 +189,6 @@ footer a {
   background: #222;
 }
 
-/* Floating Nav */
 .floating-nav {
   position: fixed;
   bottom: 24px;
@@ -213,7 +215,7 @@ footer a {
   border: none;
   box-shadow: none;
   transition: color 0.3s, text-shadow 0.3s;
-  text-shadow: 0 0 8px #fff8; /* Subtle white glow */
+  text-shadow: 0 0 8px #fff8;
 }
 
 .floating-nav-item.active,
@@ -221,26 +223,13 @@ footer a {
   color: #fff;
   background: none;
   text-shadow:
-    0 0 18px #fff,   /* Brighter white glow */
-    0 0 4px #fff8;   /* Soft white glow */
-}
-
-/* Responsive: stack vertically on very small screens */
-@media (max-width: 500px) {
-  .floating-nav {
-    flex-direction: column;
-    bottom: 12px;
-    left: 12px;
-    transform: none;
-    padding: 8px 12px;
-    border-radius: 12px;
-    gap: 16px;
-  }
+    0 0 18px #fff,
+    0 0 4px #fff8;
 }
 
 .experience-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
   gap: 32px;
   padding-bottom: 16px;
   margin-bottom: 32px;
@@ -248,7 +237,6 @@ footer a {
   scroll-snap-type: none;
 }
 
-/* Remove horizontal scroll styles if present */
 .experience-cards-container::-webkit-scrollbar {
   display: none;
 }
@@ -256,9 +244,7 @@ footer a {
 .experience-card {
   background: #181a1b;
   border-radius: 14px;
-  min-width: 400px;
   max-width: 420px;
-  flex: 0 0 400px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
   padding: 28px 28px 20px 28px;
   display: flex;
@@ -273,6 +259,7 @@ footer a {
   align-items: flex-start;
   justify-content: space-between;
   margin-bottom: 18px;
+  gap: 16px;
 }
 
 .experience-logo img {
@@ -282,7 +269,7 @@ footer a {
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 8px #0002;
-  margin-right: 18px;
+  flex-shrink: 0;
 }
 
 .experience-title-company {
@@ -290,6 +277,7 @@ footer a {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .experience-position {
@@ -297,6 +285,7 @@ footer a {
   font-weight: 700;
   color: #fff;
   margin-bottom: 2px;
+  word-break: break-word;
 }
 
 .experience-company {
@@ -308,9 +297,9 @@ footer a {
   font-size: 1rem;
   color: #fff;
   font-weight: 500;
-  margin-left: 18px;
-  white-space: nowrap;
-  align-self: flex-start;
+  white-space: normal;
+  text-align: right;
+  flex-shrink: 0;
 }
 
 .experience-details {
@@ -334,49 +323,8 @@ footer a {
   margin-right: auto;
 }
 
-@media (max-width: 900px) {
-  .navbar {
-    padding: 0 16px; /* Even less padding on smaller screens */
-  }
-}
-
-@media (max-width: 700px) {
-  .navbar {
-    padding: 0 8px;
-  }
-  .page-section {
-    padding-left: 32px;
-    padding-right: 16px;
-  }
-  .floating-nav {
-    left: 8px;
-  }
-  .navbar {
-    padding: 0 12px;
-  }
-}
-
-@media (max-width: 600px) {
-  .experience-card {
-    min-width: 90vw;
-    max-width: 95vw;
-    padding: 18px 8px 14px 8px;
-  }
-  .experience-cards-container {
-    gap: 16px;
-  }
-}
-
-/* Scroll snap for resistance effect */
-html, body {
-  height: 100%;
-  scroll-snap-type: y mandatory;
-}
-
-/* --- MODIFIED SECTION --- */
 .page-section {
-  /* Remove fixed height! */
-  min-height: 100vh; /* Ensures at least full screen, but grows with content */
+  min-height: 100vh;
   scroll-snap-align: start;
   padding-top: 80px;
   padding-left: 48px;
@@ -384,10 +332,9 @@ html, body {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Changed from center */
+  justify-content: flex-start;
 }
 
-/* --- About Section Layout & Styling --- */
 .about-section {
   display: flex;
   flex-direction: column;
@@ -398,7 +345,7 @@ html, body {
 .about-main-row {
   display: flex;
   flex-direction: row;
-  align-items: flex-start; /* Align items to the top */
+  align-items: flex-start;
   gap: 48px;
   width: 100%;
 }
@@ -420,6 +367,7 @@ html, body {
   font-size: 2rem;
   margin: 0 0 6px 0;
   color: #fff;
+  word-break: break-word;
 }
 
 .about-greeting-headline h3 {
@@ -474,9 +422,7 @@ html, body {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* Adjust this value to match the vertical offset of the bio box */
   margin-top: 85px;
-  margin-left: 200px;
 }
 
 .about-profile-pic {
@@ -520,7 +466,18 @@ html, body {
   box-shadow: 0 2px 8px #0002;
 }
 
+#contact a {
+  color: #fff !important;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+/* --- RESPONSIVE STYLES --- */
+
 @media (max-width: 900px) {
+  .navbar {
+    padding: 0 16px;
+  }
   .about-main-row {
     flex-direction: column;
     gap: 24px;
@@ -529,18 +486,55 @@ html, body {
   .about-main-right {
     align-self: center;
     margin-top: 0;
+    margin-left: 0;
   }
   .about-profile-pic {
-    width: 240px;         /* Double the previous 120px */
-    height: 240px;
+    width: 120px;
+    height: 120px;
   }
   .about-education-box {
     max-width: 100%;
     align-self: stretch;
   }
+  .about-greeting-headline {
+    flex-direction: column;
+    text-align: center;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0 12px;
+  }
+  .navbar-right {
+      gap: 8px;
+  }
+  .page-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
 }
 
 @media (max-width: 600px) {
+  /* --- FINAL LAYOUT FIX --- */
+  /* Change the container from a grid to a flex column to allow centering. */
+  .experience-cards-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the cards horizontally */
+    gap: 20px;
+  }
+  .experience-card {
+    /* Set a max-width smaller than the screen to create margins */
+    width: 90%;
+    max-width: 400px; /* Optional: cap the size on larger mobile */
+    padding: 20px 24px; /* Adjust padding for the new layout */
+  }
+  .experience-timeframe {
+    display: none;
+  }
+  /* --- END FINAL LAYOUT FIX --- */
   .about-section {
     gap: 16px;
     padding-bottom: 8px;
@@ -549,31 +543,36 @@ html, body {
     gap: 10px;
   }
   .about-bio-box {
-    padding: 10px 4px;
+    padding: 16px 12px;
   }
   .about-profile-pic {
-    width: 48px;
-    height: 48px;
+    width: 100px;
+    height: 100px;
   }
   .about-education-box {
-    padding: 10px 4px;
+    padding: 16px 12px;
     font-size: 0.95rem;
   }
   .about-greeting-headline h2 {
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
   .about-greeting-headline h3 {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
   }
   .skills-list li, .hobbies-list li {
-    font-size: 0.88rem;
-    padding: 2px 6px;
+    font-size: 0.9rem;
+    padding: 4px 8px;
   }
 }
 
-/* Add this at the end of your file or after the contact section styles */
-#contact a {
-  color: #fff !important;
-  text-decoration: none;
-  transition: color 0.2s;
+@media (max-width: 500px) {
+  .floating-nav {
+    gap: 12px;
+    padding: 10px 16px;
+    width: auto;
+  }
+  .floating-nav-item {
+    padding: 6px 10px;
+    font-size: 1rem;
+  }
 }
