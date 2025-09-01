@@ -280,7 +280,7 @@ function App() {
           <div className="project-card">
             <h3>My World</h3>
             <img
-              src="/myworlddemo.jpg"
+              src="/myworlddemo.png"
               alt="My World app preview"
               className="project-image"
             />
