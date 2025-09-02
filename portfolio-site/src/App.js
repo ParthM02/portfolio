@@ -80,6 +80,14 @@ function App() {
           >
             GitHub
           </a>
+          <a
+            href="https://www.linkedin.com/in/parthmehta0210/"
+            className="github-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
         </div>
       </nav>
 

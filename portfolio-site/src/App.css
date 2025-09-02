@@ -244,7 +244,6 @@ footer a {
 .experience-card {
   background: #181a1b;
   border-radius: 14px;
-  max-width: 420px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.18);
   padding: 28px 28px 20px 28px;
   display: flex;
