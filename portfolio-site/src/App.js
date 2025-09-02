@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from "react";
-import { Analytics } from "@vercel/analytics/react"
 import "./App.css";
 
 const sections = [
