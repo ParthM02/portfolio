@@ -1,4 +1,3 @@
-/* FINAL VERSION */
 .App {
   text-align: center;
 }
@@ -471,8 +470,6 @@ footer a {
   transition: color 0.2s;
 }
 
-/* --- RESPONSIVE STYLES --- */
-
 @media (max-width: 900px) {
   .navbar {
     padding: 0 16px;
@@ -516,24 +513,20 @@ footer a {
 }
 
 @media (max-width: 600px) {
-  /* --- FINAL LAYOUT FIX --- */
-  /* Change the container from a grid to a flex column to allow centering. */
   .experience-cards-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the cards horizontally */
+    align-items: center;
     gap: 20px;
   }
   .experience-card {
-    /* Set a max-width smaller than the screen to create margins */
     width: 90%;
-    max-width: 400px; /* Optional: cap the size on larger mobile */
-    padding: 20px 24px; /* Adjust padding for the new layout */
+    max-width: 400px;
+    padding: 20px 24px;
   }
   .experience-timeframe {
     display: none;
   }
-  /* --- END FINAL LAYOUT FIX --- */
   .about-section {
     gap: 16px;
     padding-bottom: 8px;
