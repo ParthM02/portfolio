@@ -118,7 +118,7 @@ function App() {
             <div className="about-greeting-headline">
               <div>
                 <h2>{getGreeting()}, I'm Parth!</h2>
-                <h3>Aspiring Software Engineer & Tech Enthusiast</h3>
+                <h3>Prev. Intern @ State Farm | AWS Scholar | CS @ UT Austin</h3>
               </div>
               <img
                 src="/headshot.jpeg"
@@ -214,10 +214,10 @@ function App() {
                 <img src="/statefarmlogo.png" alt="Company Logo" />
               </div>
               <div className="experience-title-company">
-                <div className="experience-position">Information Security Intern</div>
+                <div className="experience-position">Software Intern</div>
                 <div className="experience-company">State Farm</div>
               </div>
-              <div className="experience-timeframe">May 2025 - Aug 2025</div>
+              <div className="experience-timeframe">Summer 2025</div>
             </div>
             <ul className="experience-details">
               <li>Designed and developed a dashboard for use by Executives using AWS Lambda, DynamoDB, S3, Kinesis, Athena, Glue, and Terraform.</li>
@@ -236,7 +236,7 @@ function App() {
                 <div className="experience-position">Student/Mentee</div>
                 <div className="experience-company">Udacity/Amazon Web Services</div>
               </div>
-              <div className="experience-timeframe">April 2024 - Aug 2024</div>
+              <div className="experience-timeframe">Summer 2024</div>
             </div>
             <ul className="experience-details">
               <li>Used Python and AutoGluon to generate models that predict bike sharing demand using data from Kaggle.</li>
@@ -255,7 +255,7 @@ function App() {
                 <div className="experience-position">Student</div>
                 <div className="experience-company">Udacity/Amazon Web Services</div>
               </div>
-              <div className="experience-timeframe">June 2023 - October 2023</div>
+              <div className="experience-timeframe">Summer 2023</div>
             </div>
             <ul className="experience-details">
               <li>Designed and trained a Multi-layer Perceptron Neural Network using Python and PyTorch to classify plants and flowers.</li>
