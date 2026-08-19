@@ -66,6 +66,5 @@ Builds the production-ready static bundle in the `build/` directory with optimiz
 
 ## 📬 Contact & Links
 
-- **Website / Portfolio**: [Parth Mehta](https://github.com/ParthM02)
+- **Github**: [Parth Mehta](https://github.com/ParthM02)
 - **LinkedIn**: [parthmehta0210](https://www.linkedin.com/in/parthmehta0210/)
-- **Email**: [parthmehta24@utexas.edu](mailto:parthmehta24@utexas.edu)
