@@ -130,13 +130,14 @@ body {
   justify-content: space-between;
   padding: 0 40px;
   z-index: 100;
+  background: rgba(6, 10, 18, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   transition: background 0.3s, border-color 0.3s, backdrop-filter 0.3s;
   border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
-  background: rgba(6, 10, 18, 0.85);
-  backdrop-filter: blur(16px);
   border-bottom-color: var(--border);
 }
 
@@ -1016,11 +1017,21 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    padding: 0 20px;
+    padding: 0 16px;
+    height: 56px;
+  }
+
+  .navbar-actions .btn-outline {
+    padding: 6px 14px;
+    font-size: 0.82rem;
   }
 
   .section {
     padding: 80px 20px 60px;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--ticker-height) + 56px + 28px);
   }
 
   .projects-grid {
@@ -1056,6 +1067,10 @@ body {
 @media (max-width: 480px) {
   .navbar-actions .btn-ghost {
     display: none;
+  }
+
+  .hero-section {
+    padding-top: calc(var(--ticker-height) + 56px + 20px);
   }
 
   .hero-title {
