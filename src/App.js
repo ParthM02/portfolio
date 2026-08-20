@@ -446,11 +446,6 @@ function App() {
               <span className="contact-label">Email</span>
               <span className="contact-value">parthmehta24@utexas.edu</span>
             </a>
-            <a href="tel:+14695008663" className="contact-card">
-              <span className="contact-icon">☎</span>
-              <span className="contact-label">Phone</span>
-              <span className="contact-value">469-500-8663</span>
-            </a>
             <a
               href="https://www.linkedin.com/in/parthmehta0210/"
               target="_blank"
